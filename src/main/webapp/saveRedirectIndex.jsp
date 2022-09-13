@@ -11,6 +11,7 @@
     String name = request.getParameter("name");
     String course = request.getParameter("course");
     String matri = request.getParameter("matri");
+
     studentDao.save(new String[]{name, course, matri});
     response.sendRedirect("/Students_war_exploded/index.jsp");
 %>

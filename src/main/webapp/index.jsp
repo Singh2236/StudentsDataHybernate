@@ -13,83 +13,87 @@
 <html>
 <head>
     <title>StudentData</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <h1>Student Data</h1>
 
+<div class="summary-table">
+    <table class="table table-sm">
+        <tr>
+            <td id="Registraion">
+                <h3>Registration Form</h3>
+                <form action="/Students_war_exploded/saveRedirectIndex.jsp" method="post">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td>Course:</td>
+                            <td><input type="text" name="course"></td>
+                        </tr>
+                        <tr>
+                            <td>Matriculation Number:</td>
+                            <td><input type="text" name="matri"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td id="Update Information">
+                <h3>Update Information form</h3>
+                <form action="/Students_war_exploded/updateRedirectIndex.jsp" method="post">
+                    <div CLASS="summary-table">
+                        <table>
 
-<table>
-    <tr>
-        <td id="Registraion">
-            <h3>Registration Form</h3>
-            <form action="/Students_war_exploded/saveRedirectIndex.jsp" method="post">
-                <table>
-                    <tr>
-                        <td>Name:</td>
-                        <td><input type="text" name="name"></td>
-                    </tr>
-                    <tr>
-                        <td>Course:</td>
-                        <td><input type="text" name="course"></td>
-                    </tr>
-                    <tr>
-                        <td>Matriculation Number:</td>
-                        <td><input type="text" name="matri"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </td>
-        <td id="Update Information">
-            <h3>Update Information form</h3>
-            <form action="/Students_war_exploded/updateRedirectIndex.jsp" method="post">
-                <table>
+                            <tr>
+                                <td>Id</td>
+                                <td><input type="text" name="id" placeholder="valid available id"></td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" name="name"></td>
+                            </tr>
+                            <tr>
+                                <td>Course:</td>
+                                <td><input type="text" name="course"></td>
+                            </tr>
+                            <tr>
+                                <td>Matriculation Number:</td>
+                                <td><input type="text" name="matri"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </td>
+            <td id="Delete">
+                <h3>Delete</h3>
+                <form action="/Students_war_exploded/deleteRedirectIndex.jsp" method="post">
+                    <table>
+                        <tr>
+                            <td>Id</td>
+                            <td><input type="text" name="deleteId" placeholder="valid available id"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
 
-                    <tr>
-                        <td>Id</td>
-                        <td><input type="text" name="id" placeholder="valid available id"></td>
-                    </tr>
-                    <tr>
-                        <td>Name:</td>
-                        <td><input type="text" name="name"></td>
-                    </tr>
-                    <tr>
-                        <td>Course:</td>
-                        <td><input type="text" name="course"></td>
-                    </tr>
-                    <tr>
-                        <td>Matriculation Number:</td>
-                        <td><input type="text" name="matri"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-        </td>
-        <td id="Delete">
-            <h3>Delete</h3>
-            <form action="/Students_war_exploded/deleteRedirectIndex.jsp" method="post">
-                <table>
-                    <tr>
-                        <td>Id</td>
-                        <td><input type="text" name="deleteId" placeholder="valid available id"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit"></td>
-                    </tr>
-                </table>
-            </form>
-
-        </td>
-    </tr>
-</table>
-
+            </td>
+        </tr>
+    </table>
+</div>
 <br/>
 
 <div class="table-responsive">

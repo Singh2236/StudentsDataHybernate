@@ -40,12 +40,18 @@ public class StudentDataDao implements StudentDaoInterface {
                 .configure("META-INF/hibernate.cfg.xml")
                 .addAnnotatedClass(Studentdata.class)
                 .buildSessionFactory();
+
         Session currentSession = sessionFactory.getCurrentSession();
+        currentSession.getTransaction().begin();
+
         Studentdata studentdata = new Studentdata();
         studentdata.setName(params[0]);
         studentdata.setCourse(params[1]);
         studentdata.setMatri(Integer.parseInt(params[2]));
+
         currentSession.save(studentdata);
+
+        currentSession.getTransaction().commit();
         currentSession.close();
         sessionFactory.close();
 
