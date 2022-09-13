@@ -1,5 +1,3 @@
-<%@ page import="com.navi.studentdata.service.StudentDao" %>
-<%@ page import="com.navi.model.Studentdata" %>
 <%@ page import="com.navi.service.StudentDataDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
