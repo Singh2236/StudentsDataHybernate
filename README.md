@@ -1,7 +1,10 @@
 # Hibernate Project 
 
+Link to the Application: https://student4566.herokuapp.com/
+
 ## Functionalities
 - CRUD Hibernate Functions 
 
 
-![img.png](img.png)
+![img_1.png](img_1.png)
+
