@@ -17,7 +17,7 @@
 
     studentDao.update(id, new String[]{name,course,matri});
 
-    response.sendRedirect("/Students_war_exploded/index.jsp");
+    response.sendRedirect("/index.jsp");
 %>
 
 </body>

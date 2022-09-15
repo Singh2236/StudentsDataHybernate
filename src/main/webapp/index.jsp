@@ -24,7 +24,7 @@
         <tr>
             <td id="Registraion">
                 <h3>Registration Form</h3>
-                <form action="/Students_war_exploded/saveRedirectIndex.jsp" method="post">
+                <form action="/saveRedirectIndex.jsp" method="post">
                     <table>
                         <tr>
                             <td>Name:</td>
@@ -47,7 +47,7 @@
             </td>
             <td id="Update Information">
                 <h3>Update Information form</h3>
-                <form action="/Students_war_exploded/updateRedirectIndex.jsp" method="post">
+                <form action="/updateRedirectIndex.jsp" method="post">
                     <div CLASS="summary-table">
                         <table>
 
@@ -77,7 +77,7 @@
             </td>
             <td id="Delete">
                 <h3>Delete</h3>
-                <form action="/Students_war_exploded/deleteRedirectIndex.jsp" method="post">
+                <form action="/deleteRedirectIndex.jsp" method="post">
                     <table>
                         <tr>
                             <td>Id</td>
