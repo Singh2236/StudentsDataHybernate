@@ -1,11 +1,11 @@
 package com.navi.interfaces;
 
-import com.navi.model.Studentdata;
+import com.navi.model.Student;
 
 import java.util.List;
 
 public interface StudentDaoInterface {
-    public List<Studentdata> getAll();
+    public List<Student> getAll();
     // will be returning the List of Students
 
     public void save(String[] params);

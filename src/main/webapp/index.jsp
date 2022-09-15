@@ -2,12 +2,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <%@ page import="java.util.List" %>
 <%@ page import="com.navi.service.StudentDataDao" %>
-<%@ page import="com.navi.model.Studentdata" %>
+<%@ page import="com.navi.model.Student" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%
     StudentDataDao studentDao = new StudentDataDao();
-    List<Studentdata> all = studentDao.getAll();
+    List<Student> all = studentDao.getAll();
 %>
 <!DOCTYPE html>
 <html>
@@ -108,7 +108,7 @@
         </thead>
         <tbody>
         <%
-            for (Studentdata s : all) {
+            for (Student s : all) {
         %>
         <tr>
             <td><%=s.getId()%>

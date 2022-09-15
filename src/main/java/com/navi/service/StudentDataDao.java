@@ -1,7 +1,7 @@
 package com.navi.service;
 
 import com.navi.interfaces.StudentDaoInterface;
-import com.navi.model.Studentdata;
+import com.navi.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,17 +12,17 @@ public class StudentDataDao implements StudentDaoInterface {
 
 
     @Override
-    public List<Studentdata> getAll() {
+    public List<Student> getAll() {
         SessionFactory sessionFactory = new Configuration()
                 .configure("META-INF/hibernate.cfg.xml")
-                .addAnnotatedClass(Studentdata.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         Session currentSession = sessionFactory.getCurrentSession();
-        List<Studentdata> theStudents = null;
+        List<Student> theStudents = null;
         try {
             currentSession.beginTransaction();
             theStudents = currentSession
-                    .createQuery("from Studentdata ")
+                    .createQuery("from Student ")
                     .getResultList();
         } catch (Exception e) {
             e.printStackTrace();
@@ -38,13 +38,13 @@ public class StudentDataDao implements StudentDaoInterface {
     public void save(String[] params) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("META-INF/hibernate.cfg.xml")
-                .addAnnotatedClass(Studentdata.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         Session currentSession = sessionFactory.getCurrentSession();
         currentSession.getTransaction().begin();
 
-        Studentdata studentdata = new Studentdata();
+        Student studentdata = new Student();
         studentdata.setName(params[0]);
         studentdata.setCourse(params[1]);
         studentdata.setMatri(Integer.parseInt(params[2]));
@@ -62,19 +62,19 @@ public class StudentDataDao implements StudentDaoInterface {
         //Get session factory object
         SessionFactory sessionFactory = new Configuration()
                 .configure("META-INF/hibernate.cfg.xml")
-                .addAnnotatedClass(Studentdata.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         //get Current session
         Session currentSession = sessionFactory.getCurrentSession();
         //Get Transaction and start it
         currentSession.getTransaction().begin();
 
-        Studentdata studentdata = currentSession.find(Studentdata.class, id);
-        studentdata.setName(params[0]);
-        studentdata.setCourse(params[1]);
-        studentdata.setMatri(Integer.parseInt(params[2]));
+        Student student = currentSession.find(Student.class, id);
+        student.setName(params[0]);
+        student.setCourse(params[1]);
+        student.setMatri(Integer.parseInt(params[2]));
 
-        currentSession.save(studentdata);
+        currentSession.save(student);
         currentSession.getTransaction().commit();
 
         currentSession.close();
@@ -85,14 +85,14 @@ public class StudentDataDao implements StudentDaoInterface {
     public void delete(int id) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("META-INF/hibernate.cfg.xml")
-                .addAnnotatedClass(Studentdata.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         Session currentSession = sessionFactory.getCurrentSession();
         currentSession.getTransaction().begin();
 
-        Studentdata studentdata = new Studentdata();
-        studentdata.setId(id);
-        currentSession.delete(studentdata);
+        Student student = new Student();
+        student.setId(id);
+        currentSession.delete(student);
 
         currentSession.getTransaction().commit();
 

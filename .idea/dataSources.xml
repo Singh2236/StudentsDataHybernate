@@ -19,5 +19,12 @@ C:/Users/navka/IdeaProjects/Students/src/main/resources/META-INF/hibernate.cfg.x
       <jdbc-url>jdbc:mysql://localhost:3306/mydatabase</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="d99a72crl7652g@ec2-52-30-75-37.eu-west-1.compute.amazonaws.com" uuid="dd71e685-5b06-4977-b13b-91c6f47491b8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-52-30-75-37.eu-west-1.compute.amazonaws.com:5432/d99a72crl7652g</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
