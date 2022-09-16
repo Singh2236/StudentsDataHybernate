@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td><label for="matri">Matriculation:</label></td>
-                            <td><input required="text" type="number" pattern="[0-9]{5}" id="matri" name="matri" title="Five digits please"></td>
+                            <td><input required="required" type="text" pattern="[0-9]{5}" id="matri" name="matri" title="Five digits please"></td>
                         </tr>
                         <tr>
                             <td></td>
