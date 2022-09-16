@@ -10,7 +10,7 @@
     List<Student> all = studentDao.getAll();
 %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>StudentData</title>
     <link rel="stylesheet" href="styles.css">
@@ -27,20 +27,20 @@
                 <form action="/saveRedirectIndex.jsp" method="post">
                     <table>
                         <tr>
-                            <td>Name:</td>
-                            <td><input required="required" type="text" name="name"></td>
+                            <td><label for="name">Name:</label></td>
+                            <td><input required="required" type="text" id="name" name="name"></td>
                         </tr>
                         <tr>
-                            <td>Course:</td>
-                            <td><input required="required" type="text" name="course"></td>
+                            <td><label for="course">Course:</label></td>
+                            <td><input required="required" type="text" id="course" name="course"></td>
                         </tr>
                         <tr>
-                            <td>Matriculation Number:</td>
-                            <td><input required="required" type="number" minlength="5" maxlength="5" name="matri"></td>
+                            <td><label for="matri">Matriculation:</label></td>
+                            <td><input required="required" type="number" minlength="5" maxlength="5" id="matri" name="matri"></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="submit"></td>
+                            <td><input type="submit" value="Submit"></td>
                         </tr>
                     </table>
                 </form>
