@@ -35,7 +35,7 @@ public class StudentDataDao implements StudentDaoInterface {
     }
 
     @Override
-    public void save(String[] params) {
+    public void save(String name, String course, int matri) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("META-INF/hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
@@ -45,9 +45,9 @@ public class StudentDataDao implements StudentDaoInterface {
         currentSession.getTransaction().begin();
 
         Student studentdata = new Student();
-        studentdata.setName(params[0]);
-        studentdata.setCourse(params[1]);
-        studentdata.setMatri(Integer.parseInt(params[2]));
+        studentdata.setName(name);
+        studentdata.setCourse(course);
+        studentdata.setMatri(matri);
 
         currentSession.save(studentdata);
 

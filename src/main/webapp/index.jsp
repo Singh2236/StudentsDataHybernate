@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td>Matriculation Number:</td>
-                            <td><input type="text" name="matri"></td>
+                            <td><input type="number" maxlength="5" minlength="5" name="matri"></td>
                         </tr>
                         <tr>
                             <td></td>
