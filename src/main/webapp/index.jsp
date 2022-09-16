@@ -52,24 +52,24 @@
                         <table>
 
                             <tr>
-                                <td>Id</td>
-                                <td><input type="text" name="id" placeholder="valid available id"></td>
+                                <td><label for="uid" >Id:</label></td>
+                                <td><input required="required" id="uid" type="text" name="id" placeholder="Valid Id"></td>
                             </tr>
                             <tr>
-                                <td>Name:</td>
-                                <td><input type="text" name="name"></td>
+                                <td><label for="uname">Name:</label> </td>
+                                <td><input required="required" id="uname" type="text" name="name"></td>
                             </tr>
                             <tr>
-                                <td>Course:</td>
-                                <td><input type="text" name="course"></td>
+                                <td><label for="ucourse">Course:</label> </td>
+                                <td><input required="required" id="ucourse" type="text" name="course"></td>
                             </tr>
                             <tr>
-                                <td>Matriculation Number:</td>
-                                <td><input type="text" name="matri"></td>
+                                <td><label for="umatri">Matriculation Number:</label> </td>
+                                <td><input required="required" id="umatri" type="text" name="matri"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><input type="submit"></td>
+                                <td><input type="submit" value="Submit"></td>
                             </tr>
                         </table>
                     </div>
