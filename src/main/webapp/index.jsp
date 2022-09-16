@@ -13,12 +13,12 @@
 <html lang="en">
 <head>
     <title>StudentData</title>
-    /****** In Maintainable ******/
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <h1>Student Data</h1>
+/****** In Maintenance ******/
 
 <div class="summary-table">
     <table class="table table-sm">
