@@ -51,7 +51,7 @@
                             <td><input
                                     required="required"
                                     type="text"
-                                    pattern="^[1-9]$[0-9]{4}"
+                                    pattern="^[1-9][0-9]{4}"
                                     title="Five digits please and not starting with 0"
                                     id="matri"
                                     name="matri"></td>
@@ -108,7 +108,7 @@
                                 <td><input
                                         type="text"
                                         required="required"
-                                        pattern="^[1-9]$[0-9]{4}"
+                                        pattern="^[1-9][0-9]{4}"
                                         title="Five digits please and not starting with 0"
                                         id="umatri"
                                         name="matri"></td>
