@@ -31,7 +31,7 @@
                             <td><label for="name">Name:</label></td>
                             <td><input
                                     required="required"
-                                    pattern="[a-zA-Z]{3,15}"
+                                    pattern="[a-zA-Z ]{3,15}"
                                     title="text --> Char min: 3 max: 15"
                                     type="text" id="name"
                                     name="name"></td>
@@ -41,7 +41,7 @@
                             <td><input
                                     required="required"
                                     type="text"
-                                    pattern="[a-zA-Z]{3,15}"
+                                    pattern="[a-zA-Z ]{2,15}"
                                     title="text --> Char min: 3 max: 15"
                                     id="course"
                                     name="course"></td>
@@ -87,7 +87,7 @@
                                 <td><label for="uname">Name:</label></td>
                                 <td><input
                                         required="required"
-                                        pattern="[a-zA-Z]{3,15}"
+                                        pattern="[a-zA-Z ]{3,15}"
                                         title="text --> Char min: 3 max: 15"
                                         id="uname"
                                         type="text"
@@ -97,7 +97,7 @@
                                 <td><label for="ucourse">Course:</label></td>
                                 <td><input
                                         required="required"
-                                        pattern="[a-zA-Z]{3,15}"
+                                        pattern="[a-zA-Z ]{2,15}"
                                         title="text --> Char min: 3 max: 15"
                                         id="ucourse"
                                         type="text"
