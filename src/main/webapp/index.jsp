@@ -75,7 +75,10 @@
                                 <td><label for="uid">Id:</label></td>
                                 <td><input
                                         required="required"
-                                        id="uid" type="text"
+                                        id="uid"
+                                        type="text"
+                                        pattern="^[1-9][0-9]{0,2}"
+                                        title="Enter an id from the given Ids in the table below"
                                         name="id"
                                         placeholder="Valid Id">
                                 </td>
@@ -123,7 +126,7 @@
                 <form action="/deleteRedirectIndex.jsp" method="post">
                     <table>
                         <tr>
-                            <td><label for="did">Id:</label> </td>
+                            <td><label for="did">Id:</label></td>
                             <td><input
                                     type="text"
                                     pattern="^[1-9][0-9]{0,2}"
