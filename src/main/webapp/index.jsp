@@ -28,15 +28,15 @@
                     <table>
                         <tr>
                             <td>Name:</td>
-                            <td><input type="text" name="name"></td>
+                            <td><input required="required" type="text" name="name"></td>
                         </tr>
                         <tr>
                             <td>Course:</td>
-                            <td><input type="text" name="course"></td>
+                            <td><input required="required" type="text" name="course"></td>
                         </tr>
                         <tr>
                             <td>Matriculation Number:</td>
-                            <td><input type="number" minlength="5" maxlength="5" name="matri"></td>
+                            <td><input required="required" type="number" minlength="5" maxlength="5" name="matri"></td>
                         </tr>
                         <tr>
                             <td></td>
