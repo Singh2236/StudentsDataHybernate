@@ -31,8 +31,8 @@
                             <td><label for="name">Name:</label></td>
                             <td><input
                                     required="required"
-                                    pattern="[a-zA-Z]{15}"
-                                    title="text max of 15 characters"
+                                    pattern="[a-zA-Z]{3,15}"
+                                    title="text --> Char min: 3 max: 15"
                                     type="text" id="name"
                                     name="name"></td>
                         </tr>
@@ -41,24 +41,26 @@
                             <td><input
                                     required="required"
                                     type="text"
-                                    pattern="[a-zA-Z]{15}"
-                                    title="text max of 15 characters"
+                                    pattern="[a-zA-Z]{3,15}"
+                                    title="text --> Char min: 3 max: 15"
                                     id="course"
                                     name="course"></td>
                         </tr>
                         <tr>
-                            <td><label for="matri">Matriculation:</label></td>
+                            <td><label for="matri">Matriculation Number:</label></td>
                             <td><input
                                     required="required"
                                     type="text"
                                     pattern="^[1-9]$[0-9]{4}"
+                                    title="Five digits please and not starting with 0"
                                     id="matri"
-                                    name="matri"
-                                    title="Five digits please and not starting with 0"></td>
+                                    name="matri"></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="submit" value="Submit"></td>
+                            <td><input
+                                    type="submit"
+                                    value="Submit"></td>
                         </tr>
                     </table>
                 </form>
@@ -80,15 +82,33 @@
                             </tr>
                             <tr>
                                 <td><label for="uname">Name:</label></td>
-                                <td><input required="required" id="uname" type="text" name="name"></td>
+                                <td><input
+                                        required="required"
+                                        pattern="[a-zA-Z]{3,15}"
+                                        title="text --> Char min: 3 max: 15"
+                                        id="uname"
+                                        type="text"
+                                        name="name"></td>
                             </tr>
                             <tr>
                                 <td><label for="ucourse">Course:</label></td>
-                                <td><input required="required" id="ucourse" type="text" name="course"></td>
+                                <td><input
+                                        required="required"
+                                        pattern="[a-zA-Z]{3,15}"
+                                        title="text --> Char min: 3 max: 15"
+                                        id="ucourse"
+                                        type="text"
+                                        name="course"></td>
                             </tr>
                             <tr>
                                 <td><label for="umatri">Matriculation Number:</label></td>
-                                <td><input required="required" id="umatri" type="text" name="matri"></td>
+                                <td><input
+                                        type="text"
+                                        required="required"
+                                        pattern="^[1-9]$[0-9]{4}"
+                                        title="Five digits please and not starting with 0"
+                                        id="umatri"
+                                        name="matri"></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -103,8 +123,14 @@
                 <form action="/deleteRedirectIndex.jsp" method="post">
                     <table>
                         <tr>
-                            <td>Id</td>
-                            <td><input type="text" name="deleteId" placeholder="valid available id"></td>
+                            <td><label for="did">Id:</label> </td>
+                            <td><input
+                                    type="text"
+                                    pattern="^[1-9][0-9]{0,2}"
+                                    title="Enter an id from the given Ids in the table below"
+                                    name="deleteId"
+                                    id="did"
+                                    placeholder="valid available id"></td>
                         </tr>
                         <tr>
                             <td></td>
