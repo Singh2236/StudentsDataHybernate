@@ -13,6 +13,7 @@
 <html lang="en">
 <head>
     <title>StudentData</title>
+    /****** In Maintainable ******/
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -28,15 +29,32 @@
                     <table>
                         <tr>
                             <td><label for="name">Name:</label></td>
-                            <td><input required="required" type="text" id="name" name="name"></td>
+                            <td><input
+                                    required="required"
+                                    pattern="[a-zA-Z]{15}"
+                                    title="text max of 15 characters"
+                                    type="text" id="name"
+                                    name="name"></td>
                         </tr>
                         <tr>
                             <td><label for="course">Course:</label></td>
-                            <td><input required="required" type="text" id="course" name="course"></td>
+                            <td><input
+                                    required="required"
+                                    type="text"
+                                    pattern="[a-zA-Z]{15}"
+                                    title="text max of 15 characters"
+                                    id="course"
+                                    name="course"></td>
                         </tr>
                         <tr>
                             <td><label for="matri">Matriculation:</label></td>
-                            <td><input required="required" type="text" pattern="^[1-9]$[0-9]{4}" id="matri" name="matri" title="Five digits please"></td>
+                            <td><input
+                                    required="required"
+                                    type="text"
+                                    pattern="^[1-9]$[0-9]{4}"
+                                    id="matri"
+                                    name="matri"
+                                    title="Five digits please and not starting with 0"></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -52,19 +70,24 @@
                         <table>
 
                             <tr>
-                                <td><label for="uid" >Id:</label></td>
-                                <td><input required="required" id="uid" type="text" name="id" placeholder="Valid Id"></td>
+                                <td><label for="uid">Id:</label></td>
+                                <td><input
+                                        required="required"
+                                        id="uid" type="text"
+                                        name="id"
+                                        placeholder="Valid Id">
+                                </td>
                             </tr>
                             <tr>
-                                <td><label for="uname">Name:</label> </td>
+                                <td><label for="uname">Name:</label></td>
                                 <td><input required="required" id="uname" type="text" name="name"></td>
                             </tr>
                             <tr>
-                                <td><label for="ucourse">Course:</label> </td>
+                                <td><label for="ucourse">Course:</label></td>
                                 <td><input required="required" id="ucourse" type="text" name="course"></td>
                             </tr>
                             <tr>
-                                <td><label for="umatri">Matriculation Number:</label> </td>
+                                <td><label for="umatri">Matriculation Number:</label></td>
                                 <td><input required="required" id="umatri" type="text" name="matri"></td>
                             </tr>
                             <tr>
