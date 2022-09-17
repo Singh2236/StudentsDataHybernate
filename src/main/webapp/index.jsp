@@ -183,5 +183,8 @@
     </table>
 </div>
 
+<br>
+<p>Developed by:<a href="aboutMe.jsp">Navpreet Singh</a> </p>
+
 </body>
 </html>

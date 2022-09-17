@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>error</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="text-align: center" >
 <h1>Something went wrong</h1>
