@@ -10,11 +10,11 @@
 <head>
     <title>error</title>
 </head>
-<body>
-<h1 style="text-align: center">Something went wrong</h1>
+<body style="text-align: center" >
+<h1>Something went wrong</h1>
 <br>
-<p style="text-align: center">The provided id is perhaps not available in the given table.</p>
+<p >The provided id is perhaps not available in the given table.</p>
 <br>
-<a href="index.jsp" style="text-align: center">Home</a>
+<a href="index.jsp">Home</a>
 </body>
 </html>
