@@ -6,10 +6,15 @@
 </head>
 <body>
 <%
+    //Checking for if the id existsbin the database
     int id = Integer.parseInt(request.getParameter("deleteId"));
     StudentDataDao studentDao = new StudentDataDao();
-    studentDao.delete(id);
-    response.sendRedirect("/index.jsp");
+    boolean idExists = studentDao.isIdExists(id);
+
+    if (idExists) { //if id exits then perform this task
+        studentDao.delete(id);
+        response.sendRedirect("/index.jsp");
+    }else response.sendRedirect("/error.jsp");
 %>
 
 </body>

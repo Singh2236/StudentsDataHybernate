@@ -9,15 +9,15 @@
 <%
     //Geting Parameters from the front end
     int id = Integer.parseInt(request.getParameter("id"));
-    String name = request.getParameter("name");
-    String course = request.getParameter("course");
-    String matri = request.getParameter("matri");
-
     StudentDataDao studentDao = new StudentDataDao();
-
-    studentDao.update(id, new String[]{name,course,matri});
-
-    response.sendRedirect("/index.jsp");
+    boolean idExists = studentDao.isIdExists(id);
+    if (idExists) {
+        String name = request.getParameter("name");
+        String course = request.getParameter("course");
+        String matri = request.getParameter("matri");
+        studentDao.update(id, new String[]{name,course,matri});
+        response.sendRedirect("/index.jsp");
+    }else response.sendRedirect("/error.jsp");
 %>
 
 </body>

@@ -5,6 +5,7 @@ import com.navi.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -100,5 +101,23 @@ public class StudentDataDao implements StudentDaoInterface {
         currentSession.close();
         sessionFactory.close();
 
+    }
+    //todo: check this out
+    public boolean isIdExists(int id){
+        SessionFactory sessionFactory = new Configuration()
+                .configure("META-INF/hibernate.cfg.xml")
+                .addAnnotatedClass(Student.class)
+                .buildSessionFactory();
+        Session currentSession = sessionFactory.getCurrentSession();
+        currentSession.getTransaction().begin();
+
+        String hql = "SELECT s.id FROM Student s";
+        Query query = currentSession.createQuery(hql);
+        List results = query.list();
+
+        if (results.contains(id)) {
+            return true;
+        }
+        return false;
     }
 }
